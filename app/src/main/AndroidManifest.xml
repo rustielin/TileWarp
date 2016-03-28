@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weebly.httptilewarp.tilewarp" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/tilewarpicon"
+        android:label="@string/app_name"
+        android:screenOrientation="sensorPortrait"
+        android:theme="@android:style/Theme.NoTitleBar"
+        >
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="sensorPortrait"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TileWarpCongratulationsActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".TileWarpGameOverActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".ChallengeAlphabetBackward"
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".ChallengeRomanNumerals1to16"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".ChallengeRomanNumerals16to1"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".ChallengeWords16to1"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".ChallengeMultiplesof2Backward"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".ChallengeMultiplesof3Backward"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".ChallengeMultiplesof5"
+
+            android:screenOrientation="sensorPortrait"
+         >
+        </activity>
+        <activity
+            android:name=".ChallengePlain"
+
+            android:screenOrientation="sensorPortrait"
+        >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner4"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner5"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner6"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner7"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner8"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner9"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner10"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".HowtoPlayBeginner11"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".SplashScreen1Challenge"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".SplashScreen2Challenge"
+
+            android:screenOrientation="sensorPortrait"
+           >
+        </activity>
+        <activity
+            android:name=".SplashScreen3Challenge"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".SplashScreen4Challenge"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".SplashScreen5Challenge"
+
+            android:screenOrientation="sensorPortrait"
+          >
+        </activity>
+        <activity
+            android:name=".SplashScreen6Challenge"
+
+            android:screenOrientation="sensorPortrait"
+        >
+        </activity>
+        <activity
+            android:name=".SplashScreen7Challenge"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".SplashScreen8Challenge"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+        <activity
+            android:name=".Credits"
+
+            android:screenOrientation="sensorPortrait"
+            >
+        </activity>
+    </application>
+
+</manifest>

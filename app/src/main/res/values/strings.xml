@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name">TileWarp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_time_warp_howto_play">TimeWarpHowtoPlayActivity</string>
+    <string name="title_activity_tile_warp_howto_play">TileWarpHowtoPlayActivity</string>
+    <string name="title_activity_tile_warp_time">TileWarpTimeActivity</string>
+    <string name = "how_to_play">Press the squares from 1 to 16 before time runs out.</string>
+    <string name="title_activity_tile_warp_congratulations">TileWarpCongratulationsActivity</string>
+    <string name="title_activity_tile_warp_game_over">TileWarpGameOverActivity</string>
+    <string name ="game_over">GAME OVER!</string>
+    <string name = "congratulations">CONGRATULATIONS! YOU BEAT TILEWARP!</string>
+    <string name="title_activity_count_down_timer2">CountDownTimer2</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="title_activity_tile_warp_time_activity_level2">TileWarpTimeActivityLevel2</string>
+    <string name="title_activity_tile_warp_time_activity_level3">TileWarpTimeActivityLevel3</string>
+    <string name="title_activity_tile_warp_time_activity_level4">TileWarpTimeActivityLevel4</string>
+    <string name="title_activity_tile_warp_time_activity_level5">TileWarpTimeActivityLevel5</string>
+    <string name="title_activity_tile_warp_time_activity_level6">TileWarpTimeActivityLevel6</string>
+    <string name="title_activity_tile_warp_time_activity_level7">TileWarpTimeActivityLevel7</string>
+    <string name="title_activity_tile_warp_time_activity_level8">TileWarpTimeActivityLevel8</string>
+    <string name="title_activity_tile_warp_time_activity_level9">TileWarpTimeActivityLevel9</string>
+    <string name="title_activity_tile_warp_time_activity_level10">TileWarpTimeActivityLevel10
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level11">TileWarpTimeActivityLevel11
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level12">TileWarpTimeActivityLevel12
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level13">TileWarpTimeActivityLevel13
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level14">TileWarpTimeActivityLevel14
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level15">TileWarpTimeActivityLevel15
+    </string>
+    <string name="title_activity_tile_warp_time_activity_level16">TileWarpTimeActivityLevel16
+    </string>
+    <string name="title_activity_abstract">AbstractActivity</string>
+    <string name="levelone">LEVEL 1</string>
+    <string name="leveltwo">LEVEL 2</string>
+    <string name="levelthree">LEVEL 3</string>
+    <string name="levelfour">LEVEL 4</string>
+    <string name="levelfive">LEVEL 5</string>
+    <string name="levelsix">LEVEL 6</string>
+    <string name="levelseven">LEVEL 7</string>
+    <string name="leveleight">LEVEL 8</string>
+    <string name="levelnine">LEVEL 9</string>
+    <string name="levelten">LEVEL 10</string>
+    <string name="leveleleven">LEVEL 11</string>
+    <string name="leveltwelve">LEVEL 12</string>
+    <string name="levelthirteen">LEVEL 13</string>
+    <string name="levelfourteen">LEVEL 14</string>
+    <string name="levelfifteen">LEVEL 15</string>
+    <string name="levelsixteen">LEVEL 16</string>
+    <string name="startfrom1">START FROM: 1</string>
+    <string name="startfrom16">START FROM: 16</string>
+    <string name="title_activity_tile_warp_intermediate_level1">TileWarpIntermediateLevel1</string>
+    <string name="intermediate">ADVANCED</string>
+    <string name="beginner">BEGINNER</string>
+    <string name="title_activity_tile_warp_intermediate_level2">TileWarpIntermediateLevel2</string>
+    <string name="title_activity_tile_warp_intermediate_level3">TileWarpIntermediateLevel3</string>
+    <string name="title_activity_tile_warp_intermediate_level4">TileWarpIntermediateLevel4</string>
+    <string name="title_activity_tile_warp_intermediate_level5">TileWarpIntermediateLevel5</string>
+    <string name="title_activity_tile_warp_intermediate_level6">TileWarpIntermediateLevel6</string>
+    <string name="title_activity_challenge_alphabet_forward">ChallengeAlphabetForward</string>
+    <string name="challenge">CHALLENGE</string>
+    <string name="title_activity_challenge_alphabet_backward">ChallengeAlphabetBackward</string>
+    <string name="title_activity_challenge_roman_numerals1to16">ChallengeRomanNumerals1to16</string>
+    <string name="atop">GO FROM a TO p</string>
+    <string name="ztok">GO FROM z TO k</string>
+    <string name="title_activity_challenge_roman_numerals16to1">ChallengeRomanNumerals16to1</string>
+    <string name="title_activity_challenge_words1to16">ChallengeWords1to16</string>
+    <string name="title_activity_challenge_words16to1">ChallengeWords16to1</string>
+    <string name="title_activity_challenge_multiplesof2">ChallengeMultiplesof2</string>
+    <string name="gofrom2">GO FROM 2 TO 32</string>
+    <string name="title_activity_challenge_multiplesof2_backward">ChallengeMultiplesof2Backward</string>
+    <string name="gofrom32">GO FROM 32 TO 2</string>
+    <string name="gofrom3">GO FROM 3 TO 48</string>
+    <string name="gofrom48">GO FROM 48 TO 3</string>
+    <string name="gofrom4">GO FROM 4 TO 64</string>
+    <string name="gofrom64">GO FROM 64 TO 4</string>
+    <string name="gofrom5">GO FROM 5 TO 80</string>
+    <string name="gofrom80">GO FROM 80 TO 5</string>
+    <string name="title_activity_challenge_multiplesof3">ChallengeMultiplesof3</string>
+    <string name="title_activity_challenge_multiplesof3_backward">ChallengeMultiplesof3Backward
+    </string>
+    <string name="title_activity_challenge_multiplesof4">ChallengeMultiplesof4</string>
+    <string name="title_activity_challenge_multiplesof4_backward">ChallengeMultiplesof4Backward
+    </string>
+    <string name="title_activity_challenge_multiplesof5">ChallengeMultiplesof5</string>
+    <string name="title_activity_challenge_multiplesof5_backward">ChallengeMultiplesof5Backward
+    </string>
+    <string name="title_activity_challenge_wordsof_alphabet">ChallengeWordsofAlphabet</string>
+    <string name="title_activity_challenge_plain">ChallengePlain</string>
+    <string name="title_activity_splash_screen1">SplashScreen1</string>
+    <string name="title_activity_tile_warp_intermediate_level7">TileWarpIntermediateLevel7</string>
+    <string name="title_activity_tile_warp_intermediate_level8">TileWarpIntermediateLevel8</string>
+    <string name="title_activity_tile_warp_intermediate_level9">TileWarpIntermediateLevel9</string>
+    <string name="title_activity_tile_warp_intermediate_level10">TileWarpIntermediateLevel10
+    </string>
+    <string name="title_activity_tile_warp_intermediate_level11">TileWarpIntermediateLevel11
+    </string>
+    <string name="title_activity_tile_warp_intermediate_level12">TileWarpIntermediateLevel12
+    </string>
+    <string name="title_activity_tile_warp_intermediate_level13">TileWarpIntermediateLevel13
+    </string>
+    <string name="title_activity_tile_warp_level14">TileWarpLevel14</string>
+    <string name="title_activity_tile_warp">TileWarp</string>
+    <string name="title_activity_tile_warp_intermediate_level14">TileWarpIntermediateLevel14
+    </string>
+    <string name="title_activity_tile_warp_intermediate_level15">TileWarpIntermediateLevel15
+    </string>
+    <string name="title_activity_tile_warp_intermediate_level16">TileWarpIntermediateLevel16
+    </string>
+    <string name="title_activity_splash_screen1_beginner">SplashScreen1Beginner</string>
+    <string name="title_activity_howto_play_beginner1">HowtoPlayBeginner1</string>
+    <string name="title_activity_splash_screen2_beginner">SplashScreen2Beginner</string>
+    <string name="title_activity_splash_screen3_beginner">SplashScreen3Beginner</string>
+    <string name="title_activity_splash_screen4_beginner">SplashScreen4Beginner</string>
+    <string name="title_activity_splash_screen5_beginner">SplashScreen5Beginner</string>
+    <string name="title_activity_splash_screen6_beginner">SplashScreen6Beginner</string>
+    <string name="title_activity_splash_screen7_beginner">SplashScreen7Beginner</string>
+    <string name="title_activity_splash_screen8_beginner">SplashScreen8Beginner</string>
+    <string name="title_activity_splash_screen9_beginner">SplashScreen9Beginner</string>
+    <string name="title_activity_splash_screen10_beginner">SplashScreen10Beginner</string>
+    <string name="title_activity_splash_screen11_beginner">SplashScreen11Beginner</string>
+    <string name="title_activity_splash_screen12_beginner">SplashScreen12Beginner</string>
+    <string name="title_activity_splash_screen13_beginner">SplashScreen13Beginner</string>
+    <string name="title_activity_splash_screen14_beginner">SplashScreen14Beginner</string>
+    <string name="title_activity_splash_screen15_beginner">SplashScreen15Beginner</string>
+    <string name="title_activity_splash_screen16_beginner">SplashScreen16Beginner</string>
+    <string name="title_activity_howto_play_beginner2">HowtoPlayBeginner2</string>
+    <string name="title_activity_howto_play_beginner3">HowtoPlayBeginner3</string>
+    <string name="title_activity_howto_play_beginner4">HowtoPlayBeginner4</string>
+    <string name="title_activity_howto_play_beginner5">HowtoPlayBeginner5</string>
+    <string name="title_activity_howto_play_beginner6">HowtoPlayBeginner6</string>
+    <string name="title_activity_howto_play_beginner7">HowtoPlayBeginner7</string>
+    <string name="title_activity_howto_play_beginner8">HowtoPlayBeginner8</string>
+    <string name="title_activity_howto_play_beginner9">HowtoPlayBeginner9</string>
+    <string name="title_activity_howto_play_beginner10">HowtoPlayBeginner10</string>
+    <string name="title_activity_howto_play_beginner11">HowtoPlayBeginner11</string>
+    <string name="title_activity_howto_play_beginner12">HowtoPlayBeginner12</string>
+    <string name="title_activity_howto_play_beginner13">HowtoPlayBeginner13</string>
+    <string name="title_activity_howto_play_beginner14">HowtoPlayBeginner14</string>
+    <string name="title_activity_howto_play_beginner15">HowtoPlayBeginner15</string>
+    <string name="title_activity_howto_play_beginner16">HowtoPlayBeginner16</string>
+    <string name="title_activity_splash_screen1_intermediate">SplashScreen1Intermediate</string>
+    <string name="title_activity_splash_screen2_intermediate">SplashScreen2Intermediate</string>
+    <string name="title_activity_splash_screen3_intermediate">SplashScreen3Intermediate</string>
+    <string name="title_activity_splash_screen4_intermediate">SplashScreen4Intermediate</string>
+    <string name="title_activity_howto_play_beginner17">HowtoPlayBeginner17</string>
+    <string name="title_activity_howto_play_beginner18">HowtoPlayBeginner18</string>
+    <string name="title_activity_howto_play_beginner19">HowtoPlayBeginner19</string>
+    <string name="title_activity_splash_screen1_challenge">SplashScreen1Challenge</string>
+    <string name="title_activity_splash_screen2_challenge">SplashScreen2Challenge</string>
+    <string name="title_activity_splash_screen3_challenge">SplashScreen3Challenge</string>
+    <string name="title_activity_splash_screen4_challenge">SplashScreen4Challenge</string>
+    <string name="title_activity_splash_screen5_intermediate">SplashScreen5Intermediate</string>
+    <string name="title_activity_splash_screen5_challenge">SplashScreen5Challenge</string>
+    <string name="title_activity_splash_screen6_intermediate">SplashScreen6Intermediate</string>
+    <string name="title_activity_splash_screen6_challenge">SplashScreen6Challenge</string>
+    <string name="title_activity_splash_screen7_intermediate">SplashScreen7Intermediate</string>
+    <string name="title_activity_splash_screen7_challenge">SplashScreen7Challenge</string>
+    <string name="title_activity_splash_screen8">SplashScreen8</string>
+    <string name="title_activity_splash_screen8_intermediate">SplashScreen8Intermediate</string>
+    <string name="title_activity_splash_screen8_challenge">SplashScreen8Challenge</string>
+    <string name="title_activity_splash_screen9_intermediate">SplashScreen9Intermediate</string>
+    <string name="title_activity_splash_screen9_challenge">SplashScreen9Challenge</string>
+    <string name="title_activity_splash_screen10_intermediate">SplashScreen10Intermediate</string>
+    <string name="title_activity_splash_screen10_challenge">SplashScreen10Challenge</string>
+    <string name="title_activity_splash_screen11_intermediat">SplashScreen11Intermediat</string>
+    <string name="title_activity_splash_screen11_intermediate">SplashScreen11Intermediate</string>
+    <string name="title_activity_splash_screen11_challenge">SplashScreen11Challenge</string>
+    <string name="title_activity_splash_screen12_intermediate">SplashScreen12Intermediate</string>
+    <string name="title_activity_splash_screen12_challenge">SplashScreen12Challenge</string>
+    <string name="title_activity_splash_screen13_intermediate">SplashScreen13Intermediate</string>
+    <string name="title_activity_splash_screen13_challenge">SplashScreen13Challenge</string>
+    <string name="title_activity_splash_screen14_intermediate">SplashScreen14Intermediate</string>
+    <string name="title_activity_splash_screen14_challenge">SplashScreen14Challenge</string>
+    <string name="title_activity_splash_screen15_intermediate">SplashScreen15Intermediate</string>
+    <string name="title_activity_splash_screen15_challenge">SplashScreen15Challeng</string>
+    <string name="title_activity_splash_screen16_intermediate">SplashScreen16Intermediate</string>
+    <string name="title_activity_splash_screen16_challenge">SplashScreen16Challenge</string>
+    <string name="title_activity_credits">Credits</string>
+
+
+
+
+</resources>
