@@ -33,6 +33,10 @@ public class TileWarpGameOverActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tile_warp_game_over);
 
+        DJ.loserMusic();
+
+
+
         menubutton2 = (ImageButton) findViewById(R.id.menu_button);
 
         menubutton2.setOnClickListener(new View.OnClickListener() {
