@@ -30,8 +30,6 @@ public class MainActivity extends Activity {
     ImageButton playbutton;
     ImageButton credits;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

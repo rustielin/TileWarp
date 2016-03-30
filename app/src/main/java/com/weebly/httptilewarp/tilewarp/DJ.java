@@ -11,7 +11,7 @@ public class DJ {
 
     public static void iAmIn(Context context){
         if (player == null){
-            player = MediaPlayer.create(context, R.raw.appmusic);
+            player = MediaPlayer.create(context, R.raw.appmusic2);
             player.setLooping(true);
 
             try{
