@@ -1,15 +1,18 @@
 package com.weebly.httptilewarp.tilewarp;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.LinearLayoutICS;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,25 +24,15 @@ public class ChallengePlain extends Activity {
 
     public TextView countdowntimer;
     long remainingtime;
-    Button button1;
-    Button button2;
-    Button button3;
-    Button button4;
-    Button button5;
-    Button button6;
-    Button button7;
-    Button button8;
-    Button button9;
-    Button button10;
-    Button button11;
-    Button button12;
-    Button button13;
-    Button button14;
-    Button button15;
-    Button button16;
+
+    // all 16 buttons
+    // Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16;
     int i = 0;
-    int[] integersInAscendingOrder =  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+    int numTiles = 16;
+    int btnNum;
+    int[] integersInAscendingOrder = new int[numTiles];
     CountDownTimer cdt;
+
     public void onPause() {
         super.onPause();
         DJ.iAmLeaving();
@@ -63,7 +56,7 @@ public class ChallengePlain extends Activity {
 
 
         ArrayList<Integer> list = new ArrayList<Integer>();
-        for (int i = 1; i < 17; i++) {
+        for (int i = 1; i <= integersInAscendingOrder.length; i++) {
             list.add(i);
         }
         Collections.shuffle(list);
@@ -145,6 +138,39 @@ public class ChallengePlain extends Activity {
     }
 
     public void setButtons(ArrayList<Integer> list) {
+
+        LinearLayout layout = new LinearLayout(getApplicationContext());
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        for (int i = 1; i <= Math.sqrt(numTiles); i++) {
+
+            LinearLayout row = new LinearLayout(this);
+            row.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+
+            for (int j = 1; j <= Math.sqrt(numTiles); j++) {
+                Button btnTag = new Button(this);
+                btnTag.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT, android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT));
+                btnNum = i*j;
+                btnTag.setText(btnNum);
+                btnTag.setId(btnNum);
+
+                // set listener
+                (findViewById(btnNum)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int value = Integer.parseInt((findViewById(btnNum)).getText().toString());
+                        //int value = Integer.parseInt(button5.getText().toString());
+                        checkOrder(value);
+                        (findViewById(btnNum).setBackgroundResource(R.drawable.changecolor);
+                    }
+                });
+            }
+
+            layout.addView(row);
+        }
+
+
+        /*
         button1 = (Button) findViewById(R.id.Button1);
         button2 = (Button) findViewById(R.id.Button2);
         button3 = (Button) findViewById(R.id.Button3);
@@ -178,7 +204,6 @@ public class ChallengePlain extends Activity {
         button14.setText(String.valueOf(list.get(13)));
         button15.setText(String.valueOf(list.get(14)));
         button16.setText(String.valueOf(list.get(15)));
-
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -324,6 +349,8 @@ public class ChallengePlain extends Activity {
                 button16.setBackgroundResource(R.drawable.changecolor);
             }
         });
+
+        */
 
     }
 }

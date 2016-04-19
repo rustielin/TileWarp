@@ -41,7 +41,4 @@ public class DJ {
         }
     }
 
-    public static void loserMusic() {
-        player = MediaPlayer.create(context, R.raw.loser);
-    }
 }

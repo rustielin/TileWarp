@@ -28,14 +28,11 @@ public class TileWarpGameOverActivity extends Activity {
         Intent intent = new Intent(this, DJ.class);
         startActivity(intent);
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tile_warp_game_over);
-
-        DJ.loserMusic();
-
-
 
         menubutton2 = (ImageButton) findViewById(R.id.menu_button);
 
@@ -56,8 +53,5 @@ public class TileWarpGameOverActivity extends Activity {
         super.onBackPressed();
         startActivity(new Intent(TileWarpGameOverActivity.this, MainActivity.class));
         finish();
-
     }
-
-
 }
