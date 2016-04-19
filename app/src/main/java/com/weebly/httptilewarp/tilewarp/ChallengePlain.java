@@ -58,6 +58,7 @@ public class ChallengePlain extends Activity {
         ArrayList<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i <= integersInAscendingOrder.length; i++) {
             list.add(i);
+            integersInAscendingOrder[i-1] = i;
         }
         Collections.shuffle(list);
 
@@ -158,10 +159,9 @@ public class ChallengePlain extends Activity {
                 (findViewById(btnNum)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int value = Integer.parseInt((findViewById(btnNum)).getText().toString());
-                        //int value = Integer.parseInt(button5.getText().toString());
+                        int value = Integer.parseInt(((Button) findViewById(btnNum)).getText().toString());
                         checkOrder(value);
-                        (findViewById(btnNum).setBackgroundResource(R.drawable.changecolor);
+                        (findViewById(btnNum)).setBackgroundResource(R.drawable.changecolor);
                     }
                 });
             }
