@@ -25,43 +25,27 @@ public class ChallengePlain extends Activity {
     public TextView countdowntimer;
     long remainingtime;
 
-    // all buttons
-    int currentNum = 0;
-    int numTiles = 16;
+    int currentNum = 0; // just a counter
+    int numTiles = 16; // number of tiles on the screen. square numbers please!
     int btnNum;
     int[] integersInAscendingOrder = new int[numTiles];
+
+    ArrayList<Integer> integersInRandomOrder = new ArrayList<Integer>();
+
     CountDownTimer cdt;
-
-    public void onPause() {
-        super.onPause();
-        DJ.iAmLeaving();
-    }
-
-    public void onResume(){
-        super.onResume();
-        DJ.iAmIn(this);
-    }
-
-    public void buttonOnClick(View view){
-        DJ.keepMusicOn();
-        Intent intent = new Intent(this, DJ.class);
-        startActivity(intent);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenge_plain);
 
-
-        ArrayList<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i <= integersInAscendingOrder.length; i++) {
-            list.add(i);
+            integersInRandomOrder.add(i);
             integersInAscendingOrder[i-1] = i;
         }
-        Collections.shuffle(list);
+        Collections.shuffle(integersInRandomOrder);
 
-        setButtons(list);
+        setButtons();
 
         countdowntimer = (TextView) findViewById(R.id.countdown_timer);
 
@@ -85,7 +69,47 @@ public class ChallengePlain extends Activity {
         cdt.start();
     }
 
-    // have a function check order pressed
+    public void setButtons() {
+
+        LinearLayout layout = new LinearLayout(getApplicationContext());
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        for (int i = 1; i <= Math.sqrt(numTiles); i++) {
+
+            LinearLayout row = new LinearLayout(this);
+            row.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+
+            for (int j = 1; j <= Math.sqrt(numTiles); j++) {
+                Button btnTag = new Button(this);
+                btnTag.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT, android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT));
+                btnNum = i*j;
+                btnTag.setText(integersInRandomOrder.get(i*j-1));
+                btnTag.setId(btnNum);
+
+                if (i*j%2 == 0) {
+                    btnTag.setBackgroundResource(R.drawable.redbutton);
+                }
+                else {
+                    btnTag.setBackgroundResource(R.drawable.bluebutton);
+                }
+
+                // set listeners
+                (findViewById(btnNum)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int value = Integer.parseInt(((Button) findViewById(btnNum)).getText().toString());
+                        checkOrder(value);
+                        (findViewById(btnNum)).setBackgroundResource(R.drawable.changecolor);
+                    }
+                });
+            }
+
+            layout.addView(row);
+        }
+
+    }
+
+    // have a function check button order pressed
     private void checkOrder(int value) {
         // see if the button pressed is the right one
         if (value == integersInAscendingOrder[currentNum]) {
@@ -97,12 +121,20 @@ public class ChallengePlain extends Activity {
             else{
                 currentNum++;
             }
-        } else {
+        }
+        else {
             startActivity(new Intent(ChallengePlain.this, TileWarpGameOverActivity.class));
             cdt.cancel();
             finish();
         }
     }
+
+
+
+
+
+
+
 
     public boolean isrunning;
 
@@ -137,226 +169,19 @@ public class ChallengePlain extends Activity {
         finish();
     }
 
-    public void setButtons(ArrayList<Integer> list) {
+    public void onPause() {
+        super.onPause();
+        DJ.iAmLeaving();
+    }
 
-        LinearLayout layout = new LinearLayout(getApplicationContext());
-        layout.setOrientation(LinearLayout.VERTICAL);
+    public void onResume(){
+        super.onResume();
+        DJ.iAmIn(this);
+    }
 
-        for (int i = 1; i <= Math.sqrt(numTiles); i++) {
-
-            LinearLayout row = new LinearLayout(this);
-            row.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
-
-            for (int j = 1; j <= Math.sqrt(numTiles); j++) {
-                Button btnTag = new Button(this);
-                btnTag.setLayoutParams(new android.support.v7.app.ActionBar.LayoutParams(android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT, android.support.v7.app.ActionBar.LayoutParams.WRAP_CONTENT));
-                btnNum = i*j;
-                btnTag.setText(btnNum);
-                btnTag.setId(btnNum);
-
-                if (i*j%2 == 0) {
-                    btnTag.setBackgroundResource(R.drawable.redbutton);
-                }
-                else {
-                    btnTag.setBackgroundResource(R.drawable.bluebutton);
-                }
-
-                // set listener
-                (findViewById(btnNum)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int value = Integer.parseInt(((Button) findViewById(btnNum)).getText().toString());
-                        checkOrder(value);
-                        (findViewById(btnNum)).setBackgroundResource(R.drawable.changecolor);
-                    }
-                });
-            }
-
-            layout.addView(row);
-        }
-
-
-        /*
-        button1 = (Button) findViewById(R.id.Button1);
-        button2 = (Button) findViewById(R.id.Button2);
-        button3 = (Button) findViewById(R.id.Button3);
-        button4 = (Button) findViewById(R.id.Button4);
-        button5 = (Button) findViewById(R.id.Button5);
-        button6 = (Button) findViewById(R.id.Button6);
-        button7 = (Button) findViewById(R.id.Button7);
-        button8 = (Button) findViewById(R.id.Button8);
-        button9 = (Button) findViewById(R.id.Button9);
-        button10 = (Button) findViewById(R.id.Button10);
-        button11 = (Button) findViewById(R.id.Button11);
-        button12 = (Button) findViewById(R.id.Button12);
-        button13 = (Button) findViewById(R.id.Button13);
-        button14 = (Button) findViewById(R.id.Button14);
-        button15 = (Button) findViewById(R.id.Button15);
-        button16 = (Button) findViewById(R.id.Button16);
-
-        button1.setText(String.valueOf(list.get(0)));
-        button2.setText(String.valueOf(list.get(1)));
-        button3.setText(String.valueOf(list.get(2)));
-        button4.setText(String.valueOf(list.get(3)));
-        button5.setText(String.valueOf(list.get(4)));
-        button6.setText(String.valueOf(list.get(5)));
-        button7.setText(String.valueOf(list.get(6)));
-        button8.setText(String.valueOf(list.get(7)));
-        button9.setText(String.valueOf(list.get(8)));
-        button10.setText(String.valueOf(list.get(9)));
-        button11.setText(String.valueOf(list.get(10)));
-        button12.setText(String.valueOf(list.get(11)));
-        button13.setText(String.valueOf(list.get(12)));
-        button14.setText(String.valueOf(list.get(13)));
-        button15.setText(String.valueOf(list.get(14)));
-        button16.setText(String.valueOf(list.get(15)));
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button1.getText().toString());
-                checkOrder(value);
-                button1.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button2.getText().toString());
-                checkOrder(value);
-                button2.setBackgroundResource(R.drawable.changecolor);
-
-            }
-        });
-
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button3.getText().toString());
-                checkOrder(value);
-                button3.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button4.getText().toString());
-                checkOrder(value);
-                button4.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button5.getText().toString());
-                checkOrder(value);
-                button5.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button6.getText().toString());
-                checkOrder(value);
-                button6.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button7.getText().toString());
-                checkOrder(value);
-                button7.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button8.getText().toString());
-                checkOrder(value);
-                button8.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button9.getText().toString());
-                checkOrder(value);
-                button9.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button10.getText().toString());
-                checkOrder(value);
-                button10.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button11.getText().toString());
-                checkOrder(value);
-                button11.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button12.getText().toString());
-                checkOrder(value);
-                button12.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button13.getText().toString());
-                checkOrder(value);
-                button13.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button14.getText().toString());
-                checkOrder(value);
-                button14.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button15.getText().toString());
-                checkOrder(value);
-                button15.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        button16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int value = Integer.parseInt(button16.getText().toString());
-                checkOrder(value);
-                button16.setBackgroundResource(R.drawable.changecolor);
-            }
-        });
-
-        */
-
+    public void buttonOnClick(View view){
+        DJ.keepMusicOn();
+        Intent intent = new Intent(this, DJ.class);
+        startActivity(intent);
     }
 }
