@@ -25,9 +25,8 @@ public class ChallengePlain extends Activity {
     public TextView countdowntimer;
     long remainingtime;
 
-    // all 16 buttons
-    // Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16;
-    int i = 0;
+    // all buttons
+    int currentNum = 0;
     int numTiles = 16;
     int btnNum;
     int[] integersInAscendingOrder = new int[numTiles];
@@ -89,14 +88,14 @@ public class ChallengePlain extends Activity {
     // have a function check order pressed
     private void checkOrder(int value) {
         // see if the button pressed is the right one
-        if (value == integersInAscendingOrder[i]) {
-            if (i == 15) {
+        if (value == integersInAscendingOrder[currentNum]) {
+            if (currentNum == 15) {
                 startActivity(new Intent(ChallengePlain.this, SplashScreen1Challenge.class));
                 cdt.cancel();
                 finish();
             }
             else{
-                i++;
+                currentNum++;
             }
         } else {
             startActivity(new Intent(ChallengePlain.this, TileWarpGameOverActivity.class));
@@ -154,6 +153,13 @@ public class ChallengePlain extends Activity {
                 btnNum = i*j;
                 btnTag.setText(btnNum);
                 btnTag.setId(btnNum);
+
+                if (i*j%2 == 0) {
+                    btnTag.setBackgroundResource(R.drawable.redbutton);
+                }
+                else {
+                    btnTag.setBackgroundResource(R.drawable.bluebutton);
+                }
 
                 // set listener
                 (findViewById(btnNum)).setOnClickListener(new View.OnClickListener() {
